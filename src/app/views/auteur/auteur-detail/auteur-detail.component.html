@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <h2>Détails de l'auteur</h2>
+    <h3 class="my-4">
+      <strong>Auteur : </strong> {{ auteur?.nom }} {{ auteur?.prenom }}
+    </h3>
+
+    <div>
+      <div>
+        <p><strong>Nationalité : </strong> {{ auteur?.nationalite }}</p>
+        <p>
+          <strong>Date de naissance : </strong>{{ auteur?.dateDeNaissance }}
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <button class="btn btn-secondary" routerLink="/livres">
+          Retour à la liste
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

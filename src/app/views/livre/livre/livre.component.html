@@ -5,7 +5,11 @@
 </td>
 <td>{{ livre?.isbn }}</td>
 <td>{{ livre?.dateDeParution }}</td>
-<td>{{ livre?.auteur.nom }} {{ livre?.auteur.prenom }}</td>
+<td>
+  <a [routerLink]="['/auteurs', livre?.auteur.id]"
+    >{{ livre?.auteur.nom }} {{ livre?.auteur.prenom }}</a
+  >
+</td>
 <td>{{ livre?.editeur.nom }}</td>
 <td>{{ livre?.type.nom }}</td>
 <td>{{ livre?.categorie.nom }}</td>

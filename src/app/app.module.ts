@@ -12,6 +12,7 @@ import { AdminLivreComponent } from './views/admin/livre/admin-livre/admin-livre
 import { AdminUtilisateurComponent } from './views/admin/utilisateur/admin-utilisateur/admin-utilisateur.component';
 import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-utilisateur-list/admin-utilisateur-list.component';
 import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.component';
+import { AuteurDetailComponent } from './views/auteur/auteur-detail/auteur-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.co
     AdminUtilisateurListComponent,
     AdminUtilisateurComponent,
     LivreDetailComponent,
+    AuteurDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
