@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-md-10 mx-auto">
+    <h2>Liste des livres</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titre</th>
+          <th>ISBN</th>
+          <th>Année</th>
+          <th>Auteur</th>
+          <th>Editeur</th>
+          <th>Type</th>
+          <th>Catégorie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr app-livre *ngFor="let livre of livres" [livre]="livre"></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
