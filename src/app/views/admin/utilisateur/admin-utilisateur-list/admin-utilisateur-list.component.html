@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col-md-10 mx-auto">
+    <h2>Liste des livres</h2>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Email</th>
+          <th>Date de naissance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          app-admin-utilisateur
+          *ngFor="let utilisateur of utilisateurs"
+          [utilisateur]="utilisateur"
+        ></tr>
+      </tbody>
+    </table>
+  </div>
+</div>

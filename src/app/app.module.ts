@@ -9,9 +9,20 @@ import { LivreListComponent } from './views/livre/livre-list/livre-list.componen
 import { LivreComponent } from './views/livre/livre/livre.component';
 import { AdminLivreListComponent } from './views/admin/livre/admin-livre-list/admin-livre-list.component';
 import { AdminLivreComponent } from './views/admin/livre/admin-livre/admin-livre.component';
+import { AdminUtilisateurComponent } from './views/admin/utilisateur/admin-utilisateur/admin-utilisateur.component';
+import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-utilisateur-list/admin-utilisateur-list.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LivreListComponent, LivreComponent, AdminLivreListComponent, AdminLivreComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    LivreListComponent,
+    LivreComponent,
+    AdminLivreListComponent,
+    AdminLivreComponent,
+    AdminUtilisateurListComponent,
+    AdminUtilisateurComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
