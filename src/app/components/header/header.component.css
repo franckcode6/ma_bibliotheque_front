@@ -1,0 +1,26 @@
+header {
+  background-image: linear-gradient(
+      to top right,
+      rgba(199, 128, 48, 0.3),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../../assets/img/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  padding: 60px 0 80px 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+a {
+  font-family: "Arima", cursive;
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,22 +1,16 @@
-<div class="container">
-  <div>
-    <button
-      class="btn btn-dark float-start text-uppercase mt-2"
-      routerLink="/book/new"
-    >
-      Nouveau livre
-    </button>
-
-    <button class="btn btn-dark float-end text-uppercase mt-2">
-      Deconnexion
-    </button>
-    <button
-      class="btn btn-dark float-end text-uppercase m-2"
-      routerLink="/profil"
-    >
-      Mon profil
-    </button>
+<header>
+  <div class="container">
+    <nav class="d-flex justify-content-between align-items-center py-3">
+      <a routerLink="/book/new">Nouveau livre</a>
+      <ul class="d-flex m-0">
+        <li>
+          <a>Mon profil</a>
+        </li>
+        <li>
+          <a>Deconnexion</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <h1 class="text-center">Ma Bibliothèque</h1>
-</div>
-<hr />
+  <h1 class="text-center m-0">Ma Bibliothèque</h1>
+</header>
