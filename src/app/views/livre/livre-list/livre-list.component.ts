@@ -13,6 +13,10 @@ export class LivreListComponent implements OnInit {
   constructor(private livreHttpService: LivreHttpService) {}
 
   ngOnInit(): void {
-    this.livreHttpService.findAll().subscribe((data) => (this.livres = data));
+    this.livreHttpService
+      .findAll()
+      .subscribe(
+        (data) => (this.livres = data.filter((f) => f.utilisateur.id === 31))
+      );
   }
 }
