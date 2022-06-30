@@ -16,7 +16,7 @@ export class LivreListComponent implements OnInit {
     this.livreHttpService
       .findAll()
       .subscribe(
-        (data) => (this.livres = data.filter((f) => f.utilisateur.id === 31))
+        (data) => (this.livres = data.filter((f) => f.utilisateur.id === 3))
       );
   }
 }

@@ -13,4 +13,12 @@ export class LivreHttpService {
   findAll(): Observable<Livre[]> {
     return this.httpClient.get<Livre[]>(url);
   }
+
+  findOne(id: number): Observable<Livre> {
+    return this.httpClient.get<Livre>(`${url}/${id}`);
+  }
+
+  add(livre: Livre): Observable<Livre> {
+    return this.httpClient.post<Livre>(url, livre);
+  }
 }

@@ -11,6 +11,7 @@ import { AdminLivreListComponent } from './views/admin/livre/admin-livre-list/ad
 import { AdminLivreComponent } from './views/admin/livre/admin-livre/admin-livre.component';
 import { AdminUtilisateurComponent } from './views/admin/utilisateur/admin-utilisateur/admin-utilisateur.component';
 import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-utilisateur-list/admin-utilisateur-list.component';
+import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-u
     AdminLivreComponent,
     AdminUtilisateurListComponent,
     AdminUtilisateurComponent,
+    LivreDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
