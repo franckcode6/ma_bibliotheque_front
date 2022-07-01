@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +14,7 @@ import { AdminUtilisateurComponent } from './views/admin/utilisateur/admin-utili
 import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-utilisateur-list/admin-utilisateur-list.component';
 import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.component';
 import { AuteurDetailComponent } from './views/auteur/auteur-detail/auteur-detail.component';
+import { LivreAddComponent } from './views/livre/livre-add/livre-add.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,15 @@ import { AuteurDetailComponent } from './views/auteur/auteur-detail/auteur-detai
     AdminUtilisateurComponent,
     LivreDetailComponent,
     AuteurDetailComponent,
+    LivreAddComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
