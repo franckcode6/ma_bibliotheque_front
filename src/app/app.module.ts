@@ -15,6 +15,8 @@ import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-u
 import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.component';
 import { AuteurDetailComponent } from './views/auteur/auteur-detail/auteur-detail.component';
 import { LivreAddComponent } from './views/livre/livre-add/livre-add.component';
+import { ConnexionComponent } from './views/utilisateur/connexion/connexion.component';
+import { InscriptionComponent } from './views/utilisateur/inscription/inscription.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { LivreAddComponent } from './views/livre/livre-add/livre-add.component';
     LivreDetailComponent,
     AuteurDetailComponent,
     LivreAddComponent,
+    ConnexionComponent,
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,

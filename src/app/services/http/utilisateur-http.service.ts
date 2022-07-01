@@ -14,4 +14,12 @@ export class UtilisateurHttpService {
   findAll(): Observable<Utilisateur[]> {
     return this.httpClient.get<Utilisateur[]>(url);
   }
+
+  findOne(id: number): Observable<Utilisateur> {
+    return this.httpClient.get<Utilisateur>(`${url}/${id}`);
+  }
+
+  add(utilisateur: Utilisateur): Observable<Utilisateur> {
+    return this.httpClient.post<Utilisateur>(url, utilisateur);
+  }
 }

@@ -7,8 +7,12 @@ import { AuteurDetailComponent } from './views/auteur/auteur-detail/auteur-detai
 import { LivreAddComponent } from './views/livre/livre-add/livre-add.component';
 import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.component';
 import { LivreListComponent } from './views/livre/livre-list/livre-list.component';
+import { ConnexionComponent } from './views/utilisateur/connexion/connexion.component';
+import { InscriptionComponent } from './views/utilisateur/inscription/inscription.component';
 
 const routes: Routes = [
+  { path: '', component: ConnexionComponent },
+  { path: 'inscription', component: InscriptionComponent },
   { path: 'livres', component: LivreListComponent },
   { path: 'livres/add', component: LivreAddComponent },
   { path: 'livres/:id', component: LivreDetailComponent },
