@@ -1,1 +1,86 @@
-<p>livre-add works!</p>
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <h2>Ajout d'un livre</h2>
+
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="titre">Titre</label>
+        <input
+          type="text"
+          formControlName="titre"
+          id="titre"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input
+          type="text"
+          formControlName="isbn"
+          id="isbn"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dateDeParution">Date de parution</label>
+        <input
+          type="date"
+          formControlName="dateDeParution"
+          id="dateDeParution"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group" formGroupName="auteur">
+        <div>
+          <label for="idAuteur">Auteur</label>
+          <select id="idAuteur" formControlName="id" class="form-select">
+            <option *ngFor="let auteur of auteurs" [value]="auteur.id">
+              {{ auteur.nom }} {{ auteur.prenom }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="editeur">
+        <div>
+          <label for="idEditeur">Editeur</label>
+          <select id="idEditeur" formControlName="id" class="form-select">
+            <option *ngFor="let editeur of editeurs" [value]="editeur.id">
+              {{ editeur.nom }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="categorie">
+        <div>
+          <label for="idCategorie">Catégorie</label>
+          <select id="idCategorie" formControlName="id" class="form-select">
+            <option *ngFor="let categorie of categories" [value]="categorie.id">
+              {{ categorie.nom }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="type">
+        <div>
+          <label for="idType">Type</label>
+          <select id="idType" formControlName="id" class="form-select">
+            <option *ngFor="let type of types" [value]="type.id">
+              {{ type.nom }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Ajouter</button>
+    </form>
+    <button class="btn btn-secondary" routerLink="/livres">
+      Retour à la liste
+    </button>
+  </div>
+</div>
