@@ -1,1 +1,32 @@
-<p>connexion works!</p>
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <h2>Connexion</h2>
+
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          formControlName="email"
+          id="email"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="mdp">Mot de passe</label>
+        <input
+          type="password"
+          formControlName="motDePasse"
+          id="mdp"
+          class="form-control"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-success me-2">Se connecter</button>
+      <button class="btn btn-secondary" routerLink="inscription">
+        S'inscrire
+      </button>
+    </form>
+  </div>
+</div>
