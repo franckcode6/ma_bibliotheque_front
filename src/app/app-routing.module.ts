@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './services/guards/auth-guard.service';
 import { AdminLivreListComponent } from './views/admin/livre/admin-livre-list/admin-livre-list.component';
 import { AdminLivreComponent } from './views/admin/livre/admin-livre/admin-livre.component';
 import { AdminUtilisateurListComponent } from './views/admin/utilisateur/admin-utilisateur-list/admin-utilisateur-list.component';
@@ -13,12 +14,36 @@ import { InscriptionComponent } from './views/utilisateur/inscription/inscriptio
 const routes: Routes = [
   { path: '', component: ConnexionComponent },
   { path: 'inscription', component: InscriptionComponent },
-  { path: 'livres', component: LivreListComponent },
-  { path: 'livres/add', component: LivreAddComponent },
-  { path: 'livres/:id', component: LivreDetailComponent },
-  { path: 'auteurs/:id', component: AuteurDetailComponent },
-  { path: 'admin/livres', component: AdminLivreListComponent },
-  { path: 'admin/utilisateurs', component: AdminUtilisateurListComponent },
+  {
+    path: 'livres',
+    canActivate: [AuthGuardService],
+    component: LivreListComponent,
+  },
+  {
+    path: 'livres/add',
+    canActivate: [AuthGuardService],
+    component: LivreAddComponent,
+  },
+  {
+    path: 'livres/:id',
+    canActivate: [AuthGuardService],
+    component: LivreDetailComponent,
+  },
+  {
+    path: 'auteurs/:id',
+    canActivate: [AuthGuardService],
+    component: AuteurDetailComponent,
+  },
+  {
+    path: 'admin/livres',
+    canActivate: [AuthGuardService],
+    component: AdminLivreListComponent,
+  },
+  {
+    path: 'admin/utilisateurs',
+    canActivate: [AuthGuardService],
+    component: AdminUtilisateurListComponent,
+  },
 ];
 
 @NgModule({
