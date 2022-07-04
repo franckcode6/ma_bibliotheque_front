@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { UtilisateurHttpService } from 'src/app/services/http/utilisateur-http.service';
 
 @Component({
@@ -10,11 +11,13 @@ import { UtilisateurHttpService } from 'src/app/services/http/utilisateur-http.s
 })
 export class ConnexionComponent implements OnInit {
   myForm!: FormGroup;
+  errorMsg: string = '';
   submitted: boolean = false;
 
   constructor(
     private fb: FormBuilder,
     private us: UtilisateurHttpService,
+    private authService: AuthService,
     private router: Router
   ) {}
 
@@ -25,12 +28,13 @@ export class ConnexionComponent implements OnInit {
     });
   }
 
-  submitForm(): void {
-    this.submitted = true;
-    if (this.myForm.valid) {
-      console.log('VALID FORM');
-    } else {
-      console.error('INVALID FORM');
-    }
+  /**
+   * Method called when the user click on the signin button
+   */
+  onSubmitSignIn() {
+    const email: string = this.myForm.value.email;
+    const password: string = this.myForm.value.motDePasse;
+
+    this.authService.signIn(email, password);
   }
 }

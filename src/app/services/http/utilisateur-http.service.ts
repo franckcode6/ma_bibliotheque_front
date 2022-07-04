@@ -19,6 +19,10 @@ export class UtilisateurHttpService {
     return this.httpClient.get<Utilisateur>(`${url}/${id}`);
   }
 
+  findOneByEmail(email: string): Observable<Utilisateur> {
+    return this.httpClient.get<Utilisateur>(`${url}/${email}`);
+  }
+
   add(utilisateur: Utilisateur): Observable<Utilisateur> {
     return this.httpClient.post<Utilisateur>(url, utilisateur);
   }
