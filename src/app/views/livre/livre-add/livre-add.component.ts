@@ -6,6 +6,7 @@ import { Auteur } from 'src/app/models/auteur.model';
 import { Categorie } from 'src/app/models/categorie.model';
 import { Editeur } from 'src/app/models/editeur.model';
 import { Type } from 'src/app/models/type.model';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { AuteurHttpService } from 'src/app/services/http/auteur-http.service';
 import { CategorieHttpService } from 'src/app/services/http/categorie-http.service';
 import { EditeurHttpService } from 'src/app/services/http/editeur-http.service';
@@ -26,6 +27,7 @@ export class LivreAddComponent implements OnInit {
   types?: Type[];
 
   constructor(
+    private authService: AuthService,
     private fb: FormBuilder,
     private ls: LivreHttpService,
     private as: AuteurHttpService,
@@ -57,7 +59,7 @@ export class LivreAddComponent implements OnInit {
         id: '',
       }),
       utilisateur: this.fb.group({
-        id: 3,
+        id: this.authService.utilisateurConnecte.id,
       }),
     });
   }
