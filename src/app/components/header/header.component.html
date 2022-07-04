@@ -1,16 +1,15 @@
 <header>
   <div class="container">
-    <nav class="d-flex justify-content-between align-items-center py-3">
-      <a routerLink="/livres/add">Nouveau livre</a>
+    <nav class="d-flex justify-content-between align-items-center pt-3 pb-1">
+      <h1 class="text-center m-0">Ma Bibliothèque</h1>
       <ul class="d-flex m-0">
         <li>
           <a>Mon profil</a>
         </li>
         <li>
-          <a routerLink="">Deconnexion</a>
+          <a href="#" (click)="onClickSignOut()">Deconnexion</a>
         </li>
       </ul>
     </nav>
   </div>
-  <h1 class="text-center m-0">Ma Bibliothèque</h1>
 </header>

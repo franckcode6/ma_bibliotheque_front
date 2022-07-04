@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap");
 
 h1 {
-  font-family: "Arima", cursive;
+  font-family: "The Nautigal", cursive;
   font-size: 60px;
+  font-weight: 700;
 }
 
 h2 {
