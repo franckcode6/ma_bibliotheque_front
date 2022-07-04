@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: '', component: ConnexionComponent },
   { path: 'inscription', component: InscriptionComponent },
   {
-    path: 'profile',
+    path: 'profil',
     canActivate: [AuthGuardService],
     component: UtilisateurDetailComponent,
   },
