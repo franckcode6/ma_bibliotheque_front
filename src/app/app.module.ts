@@ -17,6 +17,7 @@ import { AuteurDetailComponent } from './views/auteur/auteur-detail/auteur-detai
 import { LivreAddComponent } from './views/livre/livre-add/livre-add.component';
 import { ConnexionComponent } from './views/utilisateur/connexion/connexion.component';
 import { InscriptionComponent } from './views/utilisateur/inscription/inscription.component';
+import { UtilisateurDetailComponent } from './views/utilisateur/utilisateur-detail/utilisateur-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { InscriptionComponent } from './views/utilisateur/inscription/inscriptio
     LivreAddComponent,
     ConnexionComponent,
     InscriptionComponent,
+    UtilisateurDetailComponent,
   ],
   imports: [
     BrowserModule,

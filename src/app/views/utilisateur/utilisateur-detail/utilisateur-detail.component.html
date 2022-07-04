@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <h2>Détails du profil</h2>
+    <h3 class="my-4">
+      <strong>{{ utilisateur.nom }} {{ utilisateur.prenom }}</strong>
+    </h3>
+
+    <div>
+      <div>
+        <p><strong>Email : </strong> {{ utilisateur.email }}</p>
+        <p>
+          <strong>Date de naissance : </strong>{{ utilisateur.dateDeNaissance }}
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <button class="btn btn-secondary" routerLink="/livres">
+          Retour à la liste
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

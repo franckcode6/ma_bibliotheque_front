@@ -10,10 +10,16 @@ import { LivreDetailComponent } from './views/livre/livre-detail/livre-detail.co
 import { LivreListComponent } from './views/livre/livre-list/livre-list.component';
 import { ConnexionComponent } from './views/utilisateur/connexion/connexion.component';
 import { InscriptionComponent } from './views/utilisateur/inscription/inscription.component';
+import { UtilisateurDetailComponent } from './views/utilisateur/utilisateur-detail/utilisateur-detail.component';
 
 const routes: Routes = [
   { path: '', component: ConnexionComponent },
   { path: 'inscription', component: InscriptionComponent },
+  {
+    path: 'profile',
+    canActivate: [AuthGuardService],
+    component: UtilisateurDetailComponent,
+  },
   {
     path: 'livres',
     canActivate: [AuthGuardService],
