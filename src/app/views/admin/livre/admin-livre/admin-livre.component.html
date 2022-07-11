@@ -2,3 +2,9 @@
 <td>{{ livre?.titre }}</td>
 <td>{{ livre?.auteur.nom }} {{ livre?.auteur.prenom }}</td>
 <td>{{ livre?.utilisateur.email }}</td>
+<td>
+  <a class="btn btn-sm btn-primary me-2" [routerLink]="['/livres', livre?.id]"
+    >Détails</a
+  >
+  <a class="btn btn-sm btn-danger">Supprimer</a>
+</td>
