@@ -26,4 +26,8 @@ export class UtilisateurHttpService {
   add(utilisateur: Utilisateur): Observable<Utilisateur> {
     return this.httpClient.post<Utilisateur>(url, utilisateur);
   }
+
+  delete(id: number): Observable<Utilisateur> {
+    return this.httpClient.delete<Utilisateur>(`${url}/${id}`);
+  }
 }
