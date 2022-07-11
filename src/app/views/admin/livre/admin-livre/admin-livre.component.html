@@ -6,5 +6,5 @@
   <a class="btn btn-sm btn-primary me-2" [routerLink]="['/livres', livre?.id]"
     >Détails</a
   >
-  <a class="btn btn-sm btn-danger">Supprimer</a>
+  <a class="btn btn-sm btn-danger" (click)="delete()">Supprimer</a>
 </td>

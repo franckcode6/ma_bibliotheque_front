@@ -21,4 +21,8 @@ export class LivreHttpService {
   add(livre: Livre): Observable<Livre> {
     return this.httpClient.post<Livre>(url, livre);
   }
+
+  delete(id: number): Observable<Livre> {
+    return this.httpClient.delete<Livre>(`${url}/${id}`);
+  }
 }
