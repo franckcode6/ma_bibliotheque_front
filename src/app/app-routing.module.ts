@@ -42,10 +42,12 @@ const routes: Routes = [
   },
   {
     path: 'admin/livres',
+    canActivate: [AuthGuardService],
     component: AdminLivreListComponent,
   },
   {
     path: 'admin/utilisateurs',
+    canActivate: [AuthGuardService],
     component: AdminUtilisateurListComponent,
   },
 ];
