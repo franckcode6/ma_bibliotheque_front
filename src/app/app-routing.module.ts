@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminGuardService } from './services/guards/admin-guard.service';
 import { AuthGuardService } from './services/guards/auth-guard.service';
 import { AdminLivreListComponent } from './views/admin/livre/admin-livre-list/admin-livre-list.component';
 import { AdminLivreComponent } from './views/admin/livre/admin-livre/admin-livre.component';
@@ -47,7 +48,7 @@ const routes: Routes = [
   },
   {
     path: 'admin/utilisateurs',
-    canActivate: [AuthGuardService],
+    canActivate: [AdminGuardService],
     component: AdminUtilisateurListComponent,
   },
 ];

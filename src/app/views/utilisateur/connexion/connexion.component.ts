@@ -28,9 +28,6 @@ export class ConnexionComponent implements OnInit {
     });
   }
 
-  /**
-   * Method called when the user click on the signin button
-   */
   onSubmitSignIn() {
     const email: string = this.myForm.value.email;
     const password: string = this.myForm.value.motDePasse;

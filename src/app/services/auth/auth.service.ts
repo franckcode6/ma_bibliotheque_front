@@ -22,7 +22,7 @@ export class AuthService {
     this.utilisateurHttpService
       .findOneByEmail(email)
       .subscribe((utilisateur) => (this.utilisateurConnecte = utilisateur));
-    if (this.utilisateurConnecte) {
+    if (this.utilisateurConnecte != null) {
       if (this.utilisateurConnecte.motDePasse === password) {
         this.isAuth = true;
         this.router.navigate(['livres']);
